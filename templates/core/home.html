@@ -1,0 +1,40 @@
+{% extends  'core/base.html' %}
+
+{% block content %}
+
+{% include 'include/navbar.html' %}
+    <h1>welcome {{user.username}} ,{{ yo }}</h1>
+    <br> 
+
+    <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#myModal"><i class="fa fa-trash fa-3x"></i></button>
+
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Campaign Refresh</h4>
+            </div>
+            <div class="modal-body">
+              <b>This will delete all current campaign data and download again. This might take time!!</b>
+            </div>
+            <div class="modal-footer">
+              
+              <a style="margin-right: 103px;" href="{% url 'logout' %}" class="btn" role="button"><i class="fa fa-trash fa-3x"></i></a>
+             </div>
+          </div>
+        </div>
+      </div>
+      <br>
+    </br>
+
+
+
+
+    {% endblock %}
+
+
+
+
+
+

@@ -1,0 +1,10 @@
+<nav style="background-color:rgb(90, 191, 238)">
+    <div class="nav-wrapper">
+        <a href="#" class="brand-logo">Roxio</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="{%url 'core:home' %}">Home</a></li>
+            <li><a href="{% url 'core:profile' %}"><i class="material-icons right">person</i>{{request.user}}</a></li>
+            <li><a href="{% url 'logout' %}"><i class="material-icons right">exit_to_app</i>Logout</a></li>
+        </ul>
+    </div>
+</nav>
